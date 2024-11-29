@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('cart_id')->constrained('carts'); 
+            $table->foreignId('user_id')->constrained('users'); 
             $table->integer('total_price');
             $table->string('status');
             $table->timestamps();
